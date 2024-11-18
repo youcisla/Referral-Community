@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Community - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="assets/qrcode.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="app" class="container my-5 position-relative" style="z-index: 1;">
+        <!-- Header -->
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="admin.html"><i class="fas fa-user-cog"></i> Admin Panel</a>
+                <a class="navbar-brand" href="leaderboard.html"><i class="fas fa-trophy"></i> Leaderboard</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container my-4">
+            <h1 class="text-center my-4">Welcome to the Referral Community</h1>
+            <div class="row g-4">
+                <div v-for="section in sections" :key="section.name" class="col-md-4">
+                    <div :class="'card text-white bg-' + section.color">
+                        <img :src="'assets/images/' + section.name + '_section.jpg'" class="card-img-top" alt="Section Image">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5>{{ section.title }}</h5>
+                            <button class="btn btn-light btn-sm" @click="drawWinner(section.name)"><i class="fas fa-random"></i> Draw Winner</button>
+                        </div>
+                        <div class="card-body">
+                            <div v-for="(user, index) in section.data.slice(0, 5)" :key="user.username" class="mb-3">
+                                <span><i class="fas fa-user"></i> {{ user.username }} - <i class="fas fa-link"></i> {{ user.links[0] }}</span>
+                                <button class="btn btn-sm btn-light ms-2" @click="generateQRCode(user.links[0], section.name)"><i class="fas fa-qrcode"></i></button>
+                            </div>
+                            <button v-if="section.data.length > 5" class="btn btn-sm btn-primary" @click="showMore(section.name)"><i class="fas fa-eye"></i> Show More</button>
+                            <div v-if="section.winner" class="winner-display text-center mt-3">
+                                <h6><i class="fas fa-crown"></i> Winner: <span class="badge" :class="'bg-' + section.color">{{ section.winner }}</span></h6>
+                                <div :id="'qr-' + section.name" class="mt-3"></div>
+                            </div>
+                            <div v-if="section.countdown" class="mt-3 text-center text-white">
+                                <i class="fas fa-clock"></i> Next Draw: {{ section.countdown }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer></footer>
+    <script src="app.js"></script>
+</body>
+</html>

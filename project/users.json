@@ -1,0 +1,36 @@
+{
+    "free": [
+      { "username": "Mina", "links": ["minaweb.dev"], "referrals": 5 },
+      { "username": "Amine", "links": ["aminecode.org"], "referrals": 3 },
+      { "username": "Nadia", "links": ["nadia.tech"], "referrals": 2 },
+      { "username": "Omar", "links": ["omarweb.dev"], "referrals": 4 },
+      { "username": "Aalambek", "links": ["aalambekcode.org"], "referrals": 1 },
+      { "username": "Ilyas", "links": ["ilyas.tech"], "referrals": 6 },
+      { "username": "Khalid", "links": ["khalidworld.com"], "referrals": 3 },
+      { "username": "Aymen", "links": ["aymencreative.dev"], "referrals": 7 },
+      { "username": "Zakaria", "links": ["zakcode.io"], "referrals": 5 }
+    ],
+    "vip": [
+      { "username": "Youcef", "links": ["youcefix.com"], "referrals": 8 },
+      { "username": "Sara", "links": ["sara.design"], "referrals": 6 },
+      { "username": "Amel", "links": ["amelix.com"], "referrals": 4 },
+      { "username": "Youssef", "links": ["youssef.dev"], "referrals": 10 },
+      { "username": "Houda", "links": ["houda.design"], "referrals": 9 },
+      { "username": "Samir", "links": ["samirsolutions.com"], "referrals": 7 },
+      { "username": "Karim", "links": ["karim.tech"], "referrals": 6 },
+      { "username": "Lamia", "links": ["lamiaarts.com"], "referrals": 5 },
+      { "username": "Imane", "links": ["imaneworld.com"], "referrals": 7 }
+    ],
+    "referrers": [
+      { "username": "Hamza", "links": ["hamzatech.pro"], "referrals": 10 },
+      { "username": "Lina", "links": ["linaarts.com"], "referrals": 9 },
+      { "username": "Ayoub", "links": ["ayoubtech.pro"], "referrals": 6 },
+      { "username": "Maxene", "links": ["maxenearts.com"], "referrals": 8 },
+      { "username": "Andrew", "links": ["andrewworks.org"], "referrals": 5 },
+      { "username": "Salma", "links": ["salmaworld.dev"], "referrals": 4 },
+      { "username": "Hicham", "links": ["hichamdev.io"], "referrals": 7 },
+      { "username": "Sofia", "links": ["sofiacode.org"], "referrals": 3 },
+      { "username": "Bilal", "links": ["bilaldesigns.com"], "referrals": 6 }
+    ]
+  }
+  

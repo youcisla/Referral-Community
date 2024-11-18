@@ -1,0 +1,126 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+/* Particles Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: transparent;
+}
+/* Header */
+header {
+    background-color: #282c34;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+.dark-mode {
+    --background-color: #212529;
+    --text-color: #f8f9fa;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.winner-image {
+    max-height: 100px;
+}
+
+.card {
+    margin-top: 20px;
+    background-color: transparent !important;
+}
+
+.card-body {
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.winner-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mb-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.card-body > button, div.card-header.d-flex.justify-content-between.align-items-center > button{
+    background-color: transparent;
+    border: solid 3px white;
+    color: white;
+    &:hover{
+        background-color: transparent;
+        border: dotted 3px white;
+    }
+}
+
+#admin > div > div > div > div.card-body > ul > li > div{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+#admin > div > div > div > div.card-body > button{
+    background-color: transparent;
+    border: solid 3px black;
+    color: black;
+    text-decoration: none;
+    &:hover{
+        background-color: transparent;
+        border: dotted 3px black;
+    }
+}
+
+#admin > div > div > div > div.card-header> h5, #app > div > div > div > div.card-header> h5, #leaderboard > div > div > div > div.card-header> h5{
+    text-align: center;
+}
+
+#admin > header > div, #app > header > div, #leaderboard > header > div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+i{
+    transform: scale(0.9);
+}
